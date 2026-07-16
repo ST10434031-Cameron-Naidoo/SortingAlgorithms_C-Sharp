@@ -12,3 +12,4 @@ C:\Users\27609\Desktop\SortingAlgorithms\SortingAlgorithms\obj\Debug\net10.0\ref
 C:\Users\27609\Desktop\SortingAlgorithms\SortingAlgorithms\obj\Debug\net10.0\SortingAlgorithms.pdb
 C:\Users\27609\Desktop\SortingAlgorithms\SortingAlgorithms\obj\Debug\net10.0\SortingAlgorithms.genruntimeconfig.cache
 C:\Users\27609\Desktop\SortingAlgorithms\SortingAlgorithms\obj\Debug\net10.0\ref\SortingAlgorithms.dll
+C:\Users\27609\Desktop\SortingAlgorithms\SortingAlgorithms\obj\Debug\net10.0\SortingAlgorithms.sourcelink.json

@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\27609\\Desktop\\SortingAlgorithms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2B15897-85AB-4E66-B2D7-4EDCB59D843D}|SortingAlgorithms\\SortingAlgorithms.csproj|c:\\users\\27609\\desktop\\sortingalgorithms\\sortingalgorithms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2B15897-85AB-4E66-B2D7-4EDCB59D843D}|SortingAlgorithms\\SortingAlgorithms.csproj|solutionrelative:sortingalgorithms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34CDAD27-2480-C692-FB67-8259A40C4B51}|SortingAlgorithms\\SortingAlgorithms.csproj|c:\\users\\27609\\desktop\\sortingalgorithms\\sortingalgorithms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34CDAD27-2480-C692-FB67-8259A40C4B51}|SortingAlgorithms\\SortingAlgorithms.csproj|solutionrelative:sortingalgorithms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "SortingAlgorithms\\Program.cs",
               "ToolTip": "C:\\Users\\27609\\Desktop\\SortingAlgorithms\\SortingAlgorithms\\Program.cs",
               "RelativeToolTip": "SortingAlgorithms\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-16T19:29:44.381Z",
               "EditorCaption": ""

@@ -5,12 +5,28 @@
         int count = 0;
         int[] intArray = { 5, 8, 2, 9, 1 };
 
+        int[] selectArray = { 8, 5, 2, 9, 11, 1, 3 };
+
+        Console.WriteLine("Before Bubble Sort:");
         SortingAlgorithms.Print(intArray);
         Console.WriteLine();
 
         SortingAlgorithms.BubSort(intArray);
 
-        SortingAlgorithms.Print(intArray);
+        Console.WriteLine("After Bubble Sort:");
+        SortingAlgorithms.Print(intArray); 
+        Console.WriteLine();
+
+
+        Console.WriteLine("Before Selection Sort:");
+        SortingAlgorithms.Print(selectArray);
+        Console.WriteLine() ;
+
+        SortingAlgorithms.SelectionSort(selectArray);
+
+        Console.WriteLine("After Selection Sort: ");
+        SortingAlgorithms.Print(selectArray);
+        Console.WriteLine();
 
     }
 
@@ -20,6 +36,27 @@
 
 public static class SortingAlgorithms
 {
+    public static void SelectionSort<T>(T[] array) where T: IComparable
+    {
+        for(int i=0;i<array.Length; i++)
+        {
+            int minIndex = i;
+            T minValue= array[i];
+
+            for(int j=i+1;j<array.Length; j++)
+            {
+                if (array[j].CompareTo(minValue) < 0)
+                {
+                    minIndex = j;
+                    minValue = array[j];
+                }
+            }
+            T temp = array[i];
+            array[i] = array[minIndex];
+            array[minIndex] = temp;
+        }
+    }
+
     public static void BubSort<T>(T[] array) where T : IComparable
     {
         for (int i = 0; i < array.Length; i++) {
