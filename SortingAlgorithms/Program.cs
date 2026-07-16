@@ -3,9 +3,11 @@
     static void Main(string[] args)
     {
         int count = 0;
-        int[] intArray = { 5, 8, 2, 9, 1 };
+        int[] intArray = { -11,12,-42,0,90,68,6,-9 };
 
         int[] selectArray = { 8, 5, 2, 9, 11, 1, 3 };
+
+        int[] insertArray = { -10, 11, 43, 2, 69, 97, 7, -11 };
 
         Console.WriteLine("Before Bubble Sort:");
         SortingAlgorithms.Print(intArray);
@@ -28,6 +30,15 @@
         SortingAlgorithms.Print(selectArray);
         Console.WriteLine();
 
+        Console.WriteLine("Before Insertion Sort:");
+        SortingAlgorithms.Print(insertArray);
+        Console.WriteLine();
+
+        SortingAlgorithms.InsertionSort(insertArray);
+
+        Console.WriteLine("After Insertion Sort: ");
+        SortingAlgorithms.Print(insertArray);
+        Console.WriteLine();
     }
 
 
@@ -57,11 +68,25 @@ public static class SortingAlgorithms
         }
     }
 
+    public static void InsertionSort<T>(T [] array)where T: IComparable
+    {
+        for(int i = 1; i < array.Length; i++)
+        {
+            int j = i;
+            while (j > 0 && array[j].CompareTo(array[j - 1]) < 0)
+            {
+                T temp= array[j-1];
+                array[j - 1] = array[j];
+                array[j] = temp;
+                j--;
+            }
+        }
+    }
     public static void BubSort<T>(T[] array) where T : IComparable
     {
         for (int i = 0; i < array.Length; i++) {
             {
-                for (int j = 0; j < array.Length - 1; j++)
+                for (int j = 0; j < array.Length - 1-i; j++)
                 {
                     if (array[j].CompareTo(array[j + 1]) > 0)
                     {
