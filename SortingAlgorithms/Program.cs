@@ -1,4 +1,6 @@
-﻿class Program
+﻿using System.Numerics;
+
+class Program
 {
     static void Main(string[] args)
     {
@@ -8,6 +10,8 @@
         int[] selectArray = { 8, 5, 2, 9, 11, 1, 3 };
 
         int[] insertArray = { -10, 11, 43, 2, 69, 97, 7, -11 };
+
+        int[] quickArray = { -10, 11, 43, 2, 69, 97, 7, -11 };
 
         Console.WriteLine("Before Bubble Sort:");
         SortingAlgorithms.Print(intArray);
@@ -39,6 +43,16 @@
         Console.WriteLine("After Insertion Sort: ");
         SortingAlgorithms.Print(insertArray);
         Console.WriteLine();
+
+        Console.WriteLine("Before Quick Sort: ");
+        SortingAlgorithms.Print(quickArray);
+        Console.WriteLine();
+
+        SortingAlgorithms.QuickSort(quickArray, 0, quickArray.Length-1);
+
+        Console.WriteLine("After Quick Sort: ");
+        SortingAlgorithms.Print(quickArray);
+        Console.WriteLine();
     }
 
 
@@ -47,6 +61,75 @@
 
 public static class SortingAlgorithms
 {
+    public static void QuickSort<T>(T[] array, int low, int high) where T: IComparable
+    {
+        
+        if (low < high)
+        {
+            int pivotIndex=Partition(array, low, high);
+
+            QuickSort(array, low, pivotIndex-1);
+            QuickSort(array,pivotIndex+1,high);
+        }
+    }
+
+    private static int Partition<T>(T[] array, int low, int high) where T : IComparable
+    {
+        T pivot = array[high];
+        int i = low - 1;
+
+        for (int j = low; j < high; j++)
+        {
+            
+            if (array[j].CompareTo(pivot) <= 0)
+            {
+                i++;
+
+                T temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+
+
+        T temppivot = array[i + 1];
+        array[i + 1] = array[high];
+        array[high] = temppivot;
+        return i + 1;
+    }
+
+    public static void CountSort(int[] array)
+    {
+        int maxValue = array[0];
+
+        for(int i = 0; i < array.Length; i++)
+        {
+            if (array[i].CompareTo(maxValue) > 0)
+            {
+                maxValue = array[i];
+            }
+        }
+
+
+        int[] count = new int[maxValue + 1];
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            count[i]++;
+        }
+
+        int index = 0;
+        for(int i = 0; i < maxValue; i++)
+        {
+            while (count[i] > 0)
+            {
+                array[index++] = 0;
+                count[i]--;
+            }
+        }
+
+    }
+
     public static void SelectionSort<T>(T[] array) where T: IComparable
     {
         for(int i=0;i<array.Length; i++)
